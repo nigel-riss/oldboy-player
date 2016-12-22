@@ -8,10 +8,11 @@
     // box model
     height: 4px;
     width: 100%;    
-    border: 1px solid red;
+    // border: 1px solid red;
 
     // visual
     background-color: #ccc;
+    border-radius: 2px;
 
     &:after {
         content: "";
@@ -19,6 +20,7 @@
         // positioning
         position: absolute;
         top: -18px;
+        left: 0;
         z-index: 1;
 
         // box model
@@ -30,15 +32,17 @@
     &:hover {
         & .ob-volume-bar__slider {
             // positioning
-            top: -16px;
-            transform: translateX(-4px);
+            top: -17px;
+            transform: translateX(-3px);
 
             // box model
             width: 12px;
             height: 36px;
+        }
 
+        & .ob-volume-bar__level {
             // visual
-            // border-radius: 6px;
+            background-color: $highlightColor;
         }
     }
 
@@ -49,6 +53,7 @@
 
         // visual
         background-color: $mainColor;
+        border-radius: 2px;
         // border: 1px solid red;
     }
 
@@ -68,5 +73,23 @@
         // border-radius: 3px;
         cursor: pointer;
         transition: all 0.2s ease;
+
+        &:hover {
+            // visual
+            background-color: $highlightColor;
+        }
+
+        &:active {
+            // positioning
+            top: -27px;
+            // transform: translateX(-4px);
+
+            // box model
+            width: 12px;
+            height: 34px;
+
+            // visual
+            background-color: $shadowColor;
+        }
     }
 }

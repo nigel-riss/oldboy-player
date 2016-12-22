@@ -1,12 +1,22 @@
 // colors
 $mainColor: #d5a353;
 $shadowColor: #c48537;
+$highlightColor: #e5b05a;
 $copyColor: #191514;
 
 // brekpoints
+// why so???? read: https://medium.freecodecamp.com/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862#.5km9b9ogq
 $tabletPortrait: 600px;
 $tabletLandscape: 900px;
-$desktop: 1200px;
+$desktop: 1060px;
 
 // fonts
 $textFont: "Open Sans", Arial, sans-serif;
+
+// paths
+$imgDir: "../img/";
+
+// magic vars
+$logoWidth: 280px;
+$lineHeight: 7px;
+$buttonSize: 70px;

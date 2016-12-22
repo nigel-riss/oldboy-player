@@ -1,9 +1,18 @@
 ; 
+var audio = new Audio("http://radio.oldboybarbershop.com:8000/radio");
+var playButton = document.querySelector('.ob-button--play');
+
+playButton.onclick = playRadio;
+var isPlaying = false;
 
 function playRadio() {
-    var audio = new Audio("http://radio.oldboybarbershop.com:8000/radio");
-    audio.play();
-    audio.volume = 0.01;
+    if (audio && !isPlaying) {
+        audio.play();
+        isPlaying = true;
+    } else if (audio && isPlaying) {
+        audio.pause();
+        isPlaying = false;
+    }
 }
 
-playRadio();
+// playRadio();

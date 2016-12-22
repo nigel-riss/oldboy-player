@@ -4,46 +4,145 @@
     // typography
     font-size: 0;
 
+    // visual
+    user-select: none;
+
     &__logo {
         // box model
         display: block;
-        width: 225px;
-        float: left;
         padding-bottom: 16px;
+
+        @include tablet-landscape-up {
+            display: inline-block;
+            // float: left;
+            width: $logoWidth;
+            width: calc(#{$logoWidth} + 200px);
+            // padding-left: 60px;
+
+            // visual
+            border-bottom: $lineHeight solid $mainColor;
+        }
+
+        &:before,
+        &:after {
+            content: "";
+
+            // box model
+            display: inline-block;
+            vertical-align: top;
+            width: calc((100% - #{$logoWidth}) / 2);
+            height: 41px;
+
+            // visual
+            border-bottom: $lineHeight solid $mainColor;
+        }
         
-        // visual
-        border-bottom: 5px solid $mainColor;
+        img {
+            // box model
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 auto;
+            width: 280px;
+        }
     }
 
     &__controls {
         // box model
-        float: right;
-        width: calc(100% - 225px);
-        margin-top: 33px;
-        padding: 6px 0;
-        padding-left: 52px;
+        padding: 60px 0;
 
         // visual
-        border-top: 5px solid $mainColor;
-        border-bottom: 5px solid $mainColor;
+        border-top: $lineHeight solid $mainColor;
+        border-bottom: $lineHeight solid $mainColor;
+
+        @include tablet-landscape-up {
+            // box model
+            padding: 16px 0;
+            float: right;
+            height: 116px;
+            width: calc(100% - #{$logoWidth} - 200px);
+            margin-top: 41px;
+
+            // typography
+            text-align: right;
+        }
+    }
+
+    &__control-set {
+        // box model
+        display: block;
+        padding: 0 20px;
+
+        &--music {
+            // box model
+            display: none;
+
+            @include desktop-up {
+                // box model
+                display: inline-block;
+            }
+        }
+
+        &--main {
+            // box model
+            // border: 1px solid red;
+            // padding-left: 160px;
+
+            // text-align: center;
+        }
     }
 
     &__button {
         // box model
-        display: inline-block;
-        vertical-align: top;
-        margin-top: 5px;
-        height: 65px;
-        width: 65px;
+        margin: 0 auto;
 
-        // visual
-        background-color: $mainColor;
-        border-radius: 50%;
+        @include tablet-landscape-up {
+            // box model
+            display: inline-block;
+            vertical-align: middle;
+        }
     }
 
     &__playing {
+        // border: 1px solid red;
         // box model
-        display: inline-block;
+        display: block;
+        padding-top: 40px;
+
+        // typography
+        text-align: center;
+
+        // visual
+        overflow: hidden;
+
+        @include tablet-landscape-up {
+            // box model
+            display: inline-block;
+            vertical-align: middle;
+            padding-left: 20px;
+            padding-top: 0;
+            width: calc(100% - #{$buttonSize});
+
+            // typography
+            text-align: left;
+        }
+    }
+
+    &__author {
+        // typography
+        font-family: $textFont;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.5;
+        white-space: nowrap;
+    }
+
+    &__song {
+        // typography
+        font-family: $textFont;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.5;
+        white-space: nowrap;
     }
 
     &__volume {
@@ -52,10 +151,10 @@
 
         // box model
         display: inline-block;
+        vertical-align: middle;
         vertical-align: top;
         height: 75px;
-        min-width: 200px;
-        margin: 0 50px;
-        // border: 1px solid red;
+        width: calc(100% - #{$buttonSize} - 20px);
+        margin-right: 20px;
     }
 }

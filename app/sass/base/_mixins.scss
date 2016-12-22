@@ -6,7 +6,7 @@
     }
 }
 
-@mixin tablet-lanscape-up {
+@mixin tablet-landscape-up {
     @media(min-width: $tabletLandscape) {
         @content;
     }
