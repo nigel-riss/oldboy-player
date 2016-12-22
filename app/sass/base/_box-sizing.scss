@@ -1,0 +1,12 @@
+body {
+    // box model
+    box-sizing: border-box;
+
+    // visual
+    background-color: #f9f6f2;
+}
+
+* {
+    // box model
+    box-sizing: inherit;
+}

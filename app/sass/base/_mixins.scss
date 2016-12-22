@@ -1,0 +1,19 @@
+// breakpoints
+// inspired by: https://medium.freecodecamp.com/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862#.5km9b9ogq
+@mixin tablet-portrait-up {
+    @media(min-width: $tabletPortrait) {
+        @content;
+    }
+}
+
+@mixin tablet-lanscape-up {
+    @media(min-width: $tabletLandscape) {
+        @content;
+    }
+}
+
+@mixin desktop-up {
+    @media(min-width: $desktop) {
+        @content;
+    }
+}

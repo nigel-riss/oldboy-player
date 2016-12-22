@@ -1,0 +1,72 @@
+.ob-volume-bar {
+    // positioning
+    position: absolute;
+    top: calc(50% - 2px);
+    z-index: 2;
+    
+
+    // box model
+    height: 4px;
+    width: 100%;    
+    border: 1px solid red;
+
+    // visual
+    background-color: #ccc;
+
+    &:after {
+        content: "";
+
+        // positioning
+        position: absolute;
+        top: -18px;
+        z-index: 1;
+
+        // box model
+        height: 36px;
+        width: 100%;
+        // border: 1px solid red;
+    }
+
+    &:hover {
+        & .ob-volume-bar__slider {
+            // positioning
+            top: -16px;
+            transform: translateX(-4px);
+
+            // box model
+            width: 12px;
+            height: 36px;
+
+            // visual
+            // border-radius: 6px;
+        }
+    }
+
+    &__level {
+        // box model
+        height: 4px;
+        width: 50%;
+
+        // visual
+        background-color: $mainColor;
+        // border: 1px solid red;
+    }
+
+    &__slider {
+        // positioning
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        z-index: 3;
+
+        // box model
+        height: 24px;
+        width: 6px;
+
+        // visual
+        background-color: $mainColor;
+        // border-radius: 3px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+}

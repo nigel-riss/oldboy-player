@@ -7,5 +7,15 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Yuriy Kurenkov",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.5",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.0.0",
+    "gulp-watch": "^4.3.11",
+    "sass-module-importer": "^1.4.0"
+  },
+  "dependencies": {
+    "normalize.css": "^5.0.0"
+  }
 }

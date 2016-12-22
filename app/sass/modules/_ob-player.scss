@@ -1,0 +1,61 @@
+.ob-player {
+    // box model
+
+    // typography
+    font-size: 0;
+
+    &__logo {
+        // box model
+        display: block;
+        width: 225px;
+        float: left;
+        padding-bottom: 16px;
+        
+        // visual
+        border-bottom: 5px solid $mainColor;
+    }
+
+    &__controls {
+        // box model
+        float: right;
+        width: calc(100% - 225px);
+        margin-top: 33px;
+        padding: 6px 0;
+        padding-left: 52px;
+
+        // visual
+        border-top: 5px solid $mainColor;
+        border-bottom: 5px solid $mainColor;
+    }
+
+    &__button {
+        // box model
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 5px;
+        height: 65px;
+        width: 65px;
+
+        // visual
+        background-color: $mainColor;
+        border-radius: 50%;
+    }
+
+    &__playing {
+        // box model
+        display: inline-block;
+    }
+
+    &__volume {
+        // positioning
+        position: relative;
+
+        // box model
+        display: inline-block;
+        vertical-align: top;
+        height: 75px;
+        min-width: 200px;
+        margin: 0 50px;
+        // border: 1px solid red;
+    }
+}
