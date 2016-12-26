@@ -19,9 +19,13 @@ body {
     @media (min-width: 900px) {
       .ob-player__logo {
         display: inline-block;
+        vertical-align: top;
         width: 280px;
         width: calc(280px + 200px);
         border-bottom: 7px solid #d5a353; } }
+    @media (min-width: 1060px) {
+      .ob-player__logo {
+        width: auto; } }
     .ob-player__logo:before, .ob-player__logo:after {
       content: "";
       display: inline-block;
@@ -40,12 +44,16 @@ body {
     border-bottom: 7px solid #d5a353; }
     @media (min-width: 900px) {
       .ob-player__controls {
+        display: inline-block;
+        vertical-align: top;
         padding: 16px 0;
-        float: right;
         height: 116px;
         width: calc(100% - 280px - 200px);
         margin-top: 41px;
         text-align: right; } }
+    @media (min-width: 1060px) {
+      .ob-player__controls {
+        width: calc(100% - 280px); } }
   .ob-player__control-set {
     display: block;
     padding: 0 20px; }
@@ -53,7 +61,16 @@ body {
       display: none; }
       @media (min-width: 1060px) {
         .ob-player__control-set--music {
-          display: inline-block; } }
+          display: inline-block;
+          vertical-align: top;
+          width: 50%; } }
+    .ob-player__control-set--main {
+      display: block; }
+      @media (min-width: 1060px) {
+        .ob-player__control-set--main {
+          display: inline-block;
+          vertical-align: top;
+          width: 50%; } }
   .ob-player__button {
     margin: 0 auto; }
     @media (min-width: 900px) {

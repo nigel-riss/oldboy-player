@@ -14,13 +14,15 @@
 
         @include tablet-landscape-up {
             display: inline-block;
-            // float: left;
+            vertical-align: top;
             width: $logoWidth;
             width: calc(#{$logoWidth} + 200px);
-            // padding-left: 60px;
 
             // visual
             border-bottom: $lineHeight solid $mainColor;
+        }
+        @include desktop-up {
+            width: auto;
         }
 
         &:before,
@@ -56,14 +58,19 @@
 
         @include tablet-landscape-up {
             // box model
+            display: inline-block;
+            vertical-align: top;
             padding: 16px 0;
-            float: right;
             height: 116px;
             width: calc(100% - #{$logoWidth} - 200px);
             margin-top: 41px;
 
             // typography
             text-align: right;
+        }
+        @include desktop-up {
+            // box model
+            width: calc(100% - #{$logoWidth});
         }
     }
 
@@ -79,15 +86,21 @@
             @include desktop-up {
                 // box model
                 display: inline-block;
+                vertical-align: top;
+                width: 50%;
             }
         }
 
         &--main {
             // box model
-            // border: 1px solid red;
-            // padding-left: 160px;
+            display: block;
 
-            // text-align: center;
+            @include desktop-up {
+                // box model
+                display: inline-block;
+                vertical-align: top;
+                width: 50%;
+            }
         }
     }
 
