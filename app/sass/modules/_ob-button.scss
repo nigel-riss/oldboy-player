@@ -43,8 +43,18 @@
         }
     }
 
-    &--mute {
+    &--sound-up {
         // visual
         background-image: url("#{$imgDir}ob-player--up.svg");
+    }
+
+    &--pause {
+        // visual
+        background-image: url("#{$imgDir}ob-player--pause.svg");
+    }
+
+    &--mute {
+        // visual
+        background-image: url("#{$imgDir}ob-player--mute.svg");
     }
 }

@@ -128,6 +128,9 @@
         overflow: hidden;
 
         @include tablet-landscape-up {
+            // positioning
+            position: relative;
+
             // box model
             display: inline-block;
             vertical-align: middle;
@@ -137,6 +140,23 @@
 
             // typography
             text-align: left;
+
+            &:after {
+                content: "";
+
+                // positioning
+                position: absolute;
+                top: 0;
+                right: 0;
+
+                // box model
+                width: 100px;
+                height: 100%;
+
+                // visual
+                // background-color: yellow;
+                background-image: linear-gradient(to right, transparent, #f9f6f2);
+            }
         }
     }
 
@@ -170,4 +190,22 @@
         width: calc(100% - #{$buttonSize} - 20px);
         margin-right: 20px;
     }
+
+    &__loading {
+        
+        // box model
+        display: none;
+        height: $buttonSize;
+        width: $buttonSize;
+        // border: 1px solid red;
+
+        // visual
+        background-image: url('#{$imgDir}ob-loading.png');
+        background-repeat: no-repeat;
+        animation: loading 1s steps(8, end) infinite;
+    }
+}
+
+@keyframes loading {
+    to { background-position: -560px; }
 }
