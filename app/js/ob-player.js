@@ -85,10 +85,8 @@ function updateSongInfo() {
 var authorField = $('.ob-player__author');
 var songTitleField = $('.ob-player__song');
 function setSongInfo(author, songName) {
-    authorField.html("~Ёмана-мана текста тут дохрена!");
-    songTitleField.html("Хеллон ворлд мазафака. Йо!");
-    // authorField.html(author);
-    // songTitleField.html(songName);
+    authorField.html(author);
+    songTitleField.html(songName);
 }
 
 updateSongInfo();

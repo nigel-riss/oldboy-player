@@ -21,7 +21,7 @@ body {
         display: inline-block;
         vertical-align: top;
         width: 280px;
-        width: calc(280px + 200px);
+        width: calc(280px + 40px);
         border-bottom: 7px solid #d5a353; } }
     @media (min-width: 1060px) {
       .ob-player__logo {
@@ -48,7 +48,7 @@ body {
         vertical-align: top;
         padding: 16px 0;
         height: 116px;
-        width: calc(100% - 280px - 200px);
+        width: calc(100% - 280px - 40px);
         margin-top: 41px;
         text-align: right; } }
     @media (min-width: 1060px) {
@@ -59,17 +59,23 @@ body {
     padding: 0 20px; }
     .ob-player__control-set--music {
       display: none; }
-      @media (min-width: 1060px) {
+      @media (min-width: 900px) {
         .ob-player__control-set--music {
           display: inline-block;
           vertical-align: top;
+          width: 20%; } }
+      @media (min-width: 1060px) {
+        .ob-player__control-set--music {
           width: 50%; } }
     .ob-player__control-set--main {
       display: block; }
-      @media (min-width: 1060px) {
+      @media (min-width: 900px) {
         .ob-player__control-set--main {
           display: inline-block;
           vertical-align: top;
+          width: 80%; } }
+      @media (min-width: 1060px) {
+        .ob-player__control-set--main {
           width: 50%; } }
   .ob-player__button {
     margin: 0 auto; }
@@ -113,12 +119,15 @@ body {
     white-space: nowrap; }
   .ob-player__volume {
     position: relative;
-    display: inline-block;
+    display: none;
     vertical-align: middle;
     vertical-align: top;
     height: 75px;
     width: calc(100% - 70px - 20px);
     margin-right: 20px; }
+    @media (min-width: 1060px) {
+      .ob-player__volume {
+        display: inline-block; } }
   .ob-player__loading {
     display: none;
     height: 70px;

@@ -16,7 +16,7 @@
             display: inline-block;
             vertical-align: top;
             width: $logoWidth;
-            width: calc(#{$logoWidth} + 200px);
+            width: calc(#{$logoWidth} + 40px);
 
             // visual
             border-bottom: $lineHeight solid $mainColor;
@@ -62,7 +62,7 @@
             vertical-align: top;
             padding: 16px 0;
             height: 116px;
-            width: calc(100% - #{$logoWidth} - 200px);
+            width: calc(100% - #{$logoWidth} - 40px);
             margin-top: 41px;
 
             // typography
@@ -83,10 +83,15 @@
             // box model
             display: none;
 
-            @include desktop-up {
+            @include tablet-landscape-up {
                 // box model
                 display: inline-block;
                 vertical-align: top;
+                width: 20%;
+            }
+
+            @include desktop-up {
+                // box model
                 width: 50%;
             }
         }
@@ -95,10 +100,15 @@
             // box model
             display: block;
 
-            @include desktop-up {
+            @include tablet-landscape-up {
                 // box model
                 display: inline-block;
                 vertical-align: top;
+                width: 80%;
+            }
+
+            @include desktop-up {
+                // box model
                 width: 50%;
             }
         }
@@ -183,12 +193,17 @@
         position: relative;
 
         // box model
-        display: inline-block;
+        display: none;
         vertical-align: middle;
         vertical-align: top;
         height: 75px;
         width: calc(100% - #{$buttonSize} - 20px);
         margin-right: 20px;
+
+        @include desktop-up {
+            // box model
+            display: inline-block;
+        }
     }
 
     &__loading {
