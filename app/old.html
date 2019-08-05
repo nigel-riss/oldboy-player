@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OldBoy player</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="container">
+        
+    <!-- - - - - - - - - - - - - - - - - -✂ - - - - - - - - - - - - - - - - -->
+
+    <div class="ob-player">
+        <div class="ob-player__logo">
+            <img src="./img/ob-player--logo.svg" alt="OldBoy radio">
+        </div>
+        <div class="ob-player__controls">
+            <div class="ob-player__control-set  ob-player__control-set--main">
+                <div id="ob-play-button" class="ob-player__button ob-button ob-button--play">
+                    <div id="ob-player-loading" class="ob-player__loading"></div>
+                </div>
+                <div class="ob-player__playing">
+                    <div class="ob-player__author"></div>
+                    <div class="ob-player__song"></div>
+                </div>
+            </div>
+            <div class="ob-player__control-set  ob-player__control-set--music">
+                <div class="ob-player__volume">
+                    <input id="ob-volume-bar" class="ob-volume-bar" type="range" min="0" max="100" value="50">
+                </div>
+                <div id="ob-mute-button" class="ob-player__button ob-button ob-button--sound-up"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- - - - - - - - - - - - - - - - - -✂ - - - - - - - - - - - - - - - - -->
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--<script src="./js/ob-volume-bar.js"></script>-->
+    <script src="./js/ob-player.js"></script>
+</body>
+</html>
